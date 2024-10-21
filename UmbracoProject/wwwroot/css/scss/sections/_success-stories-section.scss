@@ -1,0 +1,80 @@
+.success-stories-section{
+
+    .background{
+        padding-top: 50px;
+        @include tablet{
+            padding-top: 100px;
+
+        }
+
+        .container{
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: 50% 0%;
+
+            padding-bottom: 70px;
+
+            @include tablet{
+                padding-bottom: 300px;
+            }
+            @include desktop{
+                padding-bottom: 480px;
+            }
+            .section-format{
+                text-align: center;
+                .texts-area{
+
+                    h2{
+                        color: var(--color-light)
+                    }
+                }
+                .number-cards-area{
+                    display: flex;
+                    gap: 30px;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    @include tablet{
+                        flex-direction: row;
+                    }
+                    .number-card{
+                        @include tablet{
+                            max-width: 200px;
+                        }
+                        @include desktop{
+                            max-width: 370px;
+                        }
+                        h1{
+                            color: var(--color-secondary);
+                            margin-bottom: 0px;
+                        }
+                        h6{
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: var(--color-light);
+                        }
+
+                    }
+                }
+                .floating-image{
+                    display: none;
+                    @include tablet{
+                        position:absolute;
+                        bottom: -125px;
+                        display: block;
+                        img{
+                            max-width: 100%;
+                        }
+                    }
+                    @include desktop{
+                        bottom: -160px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        img{
+                            max-width: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

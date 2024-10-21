@@ -1,0 +1,42 @@
+@import "./mixins/mixins-colors";
+.custom-btn-dark {
+    @include button-colors(var(--color-dark), var(--color-light), var(--color-accent), var(--color-primary));
+}
+.custom-btn-primary {
+    @include button-colors(var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary));
+}
+.custom-btn-secondary {
+    @include button-colors(var(--color-secondary), var(--color-primary), var(--color-accent), var(--color-primary));
+}
+.custom-btn-accent {
+    @include button-colors(var(--color-accent), var(--color-primary), var(--color-primary), var(--color-secondary));
+}
+.custom-btn-gray {
+    @include button-colors(var(--color-gray), var(--color-primary), var(--color-accent), var(--color-primary));
+}
+.custom-btn-light {
+    @include button-colors(var(--color-light), var(--color-primary), var(--color-accent), var(--color-primary), var(--color-primary));
+}
+
+.custom-btn-menu {
+    @include button-colors(--color-primary, --color-secondary, --color-accent, var(--color-primary));
+}
+
+@include theme-buttons(
+    'dark',
+    (var(--color-dark), var(--color-light), var(--color-accent), var(--color-primary), var(--color-light)),
+    (var(--color-primary), var(--color-secondary), var(--color-accent), var(--color-primary), var(--color-primary)),
+    (var(--color-secondary), var(--color-primary), var(--color-accent), var(--color-primary), var(--color-secondary)),
+    (var(--color-accent), var(--color-primary), var(--color-primary), var(--color-secondary), var(--color-light)),
+    (var(--color-gray), var(--color-primary), var(--color-accent), var(--color-primary), var(--color-light)),
+    (var(--color-light), var(--color-primary), var(--color-accent), var(--color-primary), var(--color-light))
+);
+@include theme-buttons(
+    'primary',
+    (var(--color-dark), var(--color-light), var(--color-accent), var(--color-primary), var(--color-light)),
+    (var(--color-primary), var(--color-dark), var(--color-accent), var(--color-primary), var(--color-primary)),
+    (var(--color-secondary), var(--color-primary), var(--color-accent), var(--color-primary), var(--color-secondary)),
+    (var(--color-accent), var(--color-primary), var(--color-primary), var(--color-secondary), var(--color-light)),
+    (var(--color-gray), var(--color-primary), var(--color-accent), var(--color-primary), var(--color-light)),
+    (var(--color-light), var(--color-primary), var(--color-accent), var(--color-primary), var(--color-light))
+);

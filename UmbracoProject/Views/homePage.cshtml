@@ -3,6 +3,242 @@
 @{
     Layout = "mainLayout.cshtml";
     ViewBag.Title = Model.Value("pageTitle");
+
+    var heroSectionBackgroundImage = Model?.Value<IPublishedContent>("heroBackgroundImage")?.Url() ?? null;
+    var aboutSectionSignatureImage = Model?.Value<IPublishedContent>("aboutSignatureImage")?.Url() ?? null;
+
+    var riskImage = Model?.Value<IPublishedContent>("riskCardImage")?.Url() ?? null;
+    var bondsImage = Model?.Value<IPublishedContent>("bondsCardImage")?.Url() ?? null;
+    var assuranceImage = Model?.Value<IPublishedContent>("assuranceCardImage")?.Url() ?? null;
+    var taxImage = Model?.Value<IPublishedContent>("taxCardImage")?.Url() ?? null;
+    var financialImage = Model?.Value<IPublishedContent>("financialCardImage")?.Url() ?? null;
+    var statisticImage = Model?.Value<IPublishedContent>("statisticCardImage")?.Url() ?? null;
+
+    var readOurStoryBackgroundImage = Model?.Value<IPublishedContent>("readOurStoryBackgroundImage")?.Url() ?? null;
+    var readOurStoryImage = Model?.Value<IPublishedContent>("readOurStoryImage")?.Url() ?? null;
+    var successStoriesBackgroundImage = Model?.Value<IPublishedContent>("successStoriesBackgroundImage")?.Url() ?? null;
+    var successStoriesImage = Model?.Value<IPublishedContent>("successStoriesImage")?.Url() ?? null;
+
+    var ourProjectsCard1Image = Model?.Value<IPublishedContent>("ourProjectsCard1Image")?.Url() ?? null;
+    var ourProjectsCard2Image = Model?.Value<IPublishedContent>("ourProjectsCard2Image")?.Url() ?? null;
+    var ourProjectsCard3Image = Model?.Value<IPublishedContent>("ourProjectsCard3Image")?.Url() ?? null;
+    var ourProjectsCard4Image = Model?.Value<IPublishedContent>("ourProjectsCard4Image")?.Url() ?? null;
+
+    var logoImage1 = Model?.Value<IPublishedContent>("logo1Image")?.Url() ?? null;
+    var logoImage2 = Model?.Value<IPublishedContent>("logo2Image")?.Url() ?? null;
+    var logoImage3 = Model?.Value<IPublishedContent>("logo3Image")?.Url() ?? null;
+    var logoImage4 = Model?.Value<IPublishedContent>("logo4Image")?.Url() ?? null;
+    var logoImage5 = Model?.Value<IPublishedContent>("logo5Image")?.Url() ?? null;
+    var logoImage6 = Model?.Value<IPublishedContent>("logo6Image")?.Url() ?? null;
+
+
+
+
 }
 
-<h1>@Model.Value("pageTitle")</h1>
+<section class="hero-section">
+    <div class="background" style="background-image:url(@heroSectionBackgroundImage)">
+        <div class="container">
+            <div class="section-format">
+                <h2>@Model?.Value("heroHeadline")</h2>
+                <p>@Model?.Value("heroText")</p>
+                <a href="@Model?.Value("heroButtonUrl")" class="custom-btn-primary">@Model?.Value("heroButtonText")</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-us-section">
+    <div class="background">
+        <div class="container">
+            <div class="section-format">
+                <div class="texts-area">
+                    <h6>@Model?.Value("aboutTitle")</h6>
+                    <h2>@Model?.Value("aboutHeadline")</h2>
+                    <p class="quote">@Model?.Value("aboutQuote")</p>
+                    <p>@Model?.Value("aboutText")</p>
+                    <img src="@aboutSectionSignatureImage" alt="@Model?.Value("aboutSignatureImageAltText")">
+                    <p>@Model?.Value("aboutSignature")</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-services-section">
+    <div class="background">
+        <div class="container">
+            <div class="section-format">
+                <div class="texts-area">
+                    <h6>@Model.Value("ourServicesTitle")</h6>
+                    <div class="headlines">
+                        <h2>@Model.Value("ourServicesHeadline1")</h2>
+                        <h2>@Model.Value("ourServicesHeadline2")</h2>
+                    </div>
+                </div>
+                <div class="cards-area">
+                    <a href="@Model.Value("riskCardUrl")" class="card">
+                        <h5>@Model.Value("riskCardTitle") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@riskImage" alt="@Model.Value("riskCardImageAltText")">
+                        <p>@Model.Value("riskCardText")</p>
+                    </a>
+                    <a href="@Model.Value("bondsCardUrl")" class="card">
+                        <h5>@Model.Value("bondsCardTitle") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@bondsImage" alt="@Model.Value("bondsCardImageAltText")">
+                        <p>@Model.Value("bondsCardText")</p>
+                    </a>
+                    <a href="@Model.Value("assuranceCardUrl")" class="card">
+                        <h5>@Model.Value("assuranceCardTitle") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@assuranceImage" alt="@Model.Value("assuranceCardImageAltText")">
+                        <p>@Model.Value("assuranceCardText")</p>
+                    </a>
+                    <a href="@Model.Value("TaxCardUrl")" class="card">
+                        <h5>@Model.Value("TaxCardTitle") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@taxImage" alt="@Model.Value("TaxCardImageAltText")">
+                        <p>@Model.Value("TaxCardText")</p>
+                    </a>
+                    <a href="@Model.Value("financialCardUrl")" class="card">
+                        <h5>@Model.Value("financialCardTitle") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@financialImage" alt="@Model.Value("financialCardImageAltText")">
+                        <p>@Model.Value("financialCardText")</p>
+                    </a>
+                    <a href="@Model.Value("statisticCardUrl")" class="card">
+                        <h5>@Model.Value("statisticCardTitle") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@statisticImage" alt="@Model.Value("statisticCardImageAltText")">
+                        <p>@Model.Value("statisticCardText")</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="read-our-story-section">
+    <div class="background">
+        <div class="container" style="background-image:url(@readOurStoryBackgroundImage)">
+            <div class="section-format">
+                <div class="texts-area">
+                    <div class="headlines">
+                        <h2>@Model.Value("readOurStoryHeadline1")</h2>
+                        <h2><span>@Model.Value("readOurStoryHeadline2")<span></h2>
+                    </div>
+                    <p>@Model?.Value("readOurStoryText")</p>
+                    <a href="@Model?.Value("readOurStoryLinkUrl")" class="custom-btn-primary">@Model?.Value("readOurStoryLinkText")</a>
+                </div>
+                <div class="image-area">
+                    <img src="@readOurStoryImage" alt="@Model.Value("readOurStoryImageAltText")">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="success-stories-section">
+    <div class="background custom-bg-primary">
+        <div class="container" style="background-image:url(@successStoriesBackgroundImage)">
+            <div class="section-format">
+                <div class="texts-area">
+                    <h6>@Model?.Value("successStoriesTitle")</h6>
+                    <h2>@Model?.Value("successStoriesHeadline")</h2>
+                </div>
+                <div class="number-cards-area">
+                    <div class="number-card">
+                        <h1>@Model?.Value("numberCard1Number")</h1>
+                        <h6>@Model?.Value("numberCard1Text")</h6>
+                    </div>
+                    <div class="number-card">
+                        <h1>@Model?.Value("numberCard2Number")</h1>
+                        <h6>@Model?.Value("numberCard2Text")</h6>
+                    </div>
+                    <div class="number-card">
+                        <h1>@Model?.Value("numberCard3Number")</h1>
+                        <h6>@Model?.Value("numberCard3Text")</h6>
+                    </div>
+                </div>
+                <div class="floating-image">
+                    <img src="@successStoriesImage" alt="@Model?.Value("successStoriesImageAltText")">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="our-projects-section">
+    <div class="background">
+        <div class="container">
+            <div class="section-format">
+                <div class="texts-area">
+                    <h6>@Model?.Value("ourProjectsTitle")</h6>
+                    <h2>@Model?.Value("ourProjectsHeadline")</h2>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cards-area">
+            <div class="cards-grid">
+                <a href="@Model?.Value("ourProjectsCard1LinkUrl")" class="card">
+                    <img src="@ourProjectsCard1Image" alt="@Model?.Value("ourProjectsCard1ImageAltText")" class="item-image">
+                    <div class="overlay">
+                        <div class="text-format">
+                            <div class="text-flex">
+                                <h6>@Model?.Value("ourProjectsCard1Title")</h6>
+                                <p>@Model?.Value("ourProjectsCard1Text")</p>
+                            </div>
+                            <i class="fa-regular fa-angle-up fa-rotate-90"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="@Model?.Value("ourProjectsCard2LinkUrl")" class="card">
+                    <img src="@ourProjectsCard2Image" alt="@Model?.Value("ourProjectsCard2ImageAltText")" class="item-image">
+                    <div class="overlay">
+                        <div class="text-format">
+                            <div class="text-flex">
+                                <h6>@Model?.Value("ourProjectsCard2Title")</h6>
+                                <p>@Model?.Value("ourProjectsCard3Text")</p>
+                            </div>
+                            <i class="fa-regular fa-angle-up fa-rotate-90"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="@Model?.Value("ourProjectsCard3LinkUrl")" class="card">
+                    <img src="@ourProjectsCard3Image" alt="@Model?.Value("ourProjectsCard3ImageAltText")" class="item-image">
+                    <div class="overlay">
+                        <div class="text-format">
+                            <div class="text-flex">
+                                <h6>@Model?.Value("ourProjectsCard3Title")</h6>
+                                <p>@Model?.Value("ourProjectsCard3Text")</p>
+                            </div>
+                            <i class="fa-regular fa-angle-up fa-rotate-90"></i>
+                        </div>
+                    </div>
+                </a>
+                <a href="@Model?.Value("ourProjectsCard4LinkUrl")" class="card">
+                    <img src="@ourProjectsCard4Image" alt="@Model?.Value("ourProjectsCard4ImageAltText")" class="item-image">
+                    <div class="overlay">
+                        <div class="text-format">
+                            <div class="text-flex">
+                                <h6>@Model?.Value("ourProjectsCard4Title")</h6>
+                                <p>@Model?.Value("ourProjectsCard4Text")</p>
+                            </div>
+                            <i class="fa-solid fa-angle-up fa-rotate-90"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="logos-area">
+                <div class="logos-format">
+                    <img src="@logoImage1" alt="@Model?.Value("logoImage1AltText")">
+                    <img src="@logoImage2" alt="@Model?.Value("logoImage2AltText")">
+                    <img src="@logoImage3" alt="@Model?.Value("logoImage3AltText")">
+                    <img src="@logoImage4" alt="@Model?.Value("logoImage4AltText")">
+                    <img src="@logoImage5" alt="@Model?.Value("logoImage5AltText")">
+                    <img src="@logoImage6" alt="@Model?.Value("logoImage6AltText")">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

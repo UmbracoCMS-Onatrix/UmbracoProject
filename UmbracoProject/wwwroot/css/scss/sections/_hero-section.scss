@@ -1,0 +1,70 @@
+.hero-section{
+    .background{
+        background-color: var(--color-gray);
+        @include tablet{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 55%;
+        }
+        .container{
+            display: flex;
+            justify-content: left;
+            .section-format{
+                display: flex;
+                flex-direction: column;
+
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 50px;
+
+               h2{
+                text-align: center;
+                font-size: 45px;
+               }
+               @include tablet{
+                width: 45%;
+                margin-left: 15px;
+                h2{
+                    font-size: 60px;
+                    text-align: start;
+                    @include desktop{
+
+                        font-size: 70px;
+                        font-weight: 700;
+                    }
+                }
+                @include desktop{
+                    height: 552px;
+                    margin-top: 115px;
+                }
+               }
+               p{
+                   font-size: 14px;
+                   font-weight: 400;
+                   padding-bottom: 20px;
+                   text-align: center;
+                   @include tablet{
+                    text-align: start;
+                    width: 80%;
+                    background-color: transparent;
+                    font-size: 16px;
+                   }
+                   @include desktop{
+                    width: 98%;
+                   }
+               }
+               .custom-btn-primary{
+                align-self: center;
+                @include tablet{
+                    align-self: flex-start;
+                  }
+                  @include desktop{
+                    margin-top: 10px;
+                  }
+               }
+
+            }
+
+        }
+    }
+}

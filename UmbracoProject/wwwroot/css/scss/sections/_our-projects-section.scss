@@ -1,0 +1,140 @@
+.our-projects-section {
+    .background {
+        margin-top: 60px;
+
+        @include tablet {
+            margin-top: 200px;
+        }
+
+        @include desktop {
+            margin-top: 250px;
+        }
+
+        .container {
+            .section-format {
+                .texts-area {
+                    text-align: center;
+
+                    @include tablet {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .cards-area {
+            display: flex;
+            justify-content: center;
+
+            .cards-grid {
+                position: relative;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0px 5px 0px 5px;
+                gap: 5px;
+                border-radius: 0%;
+                border: none;
+
+                .card {
+                    border: none;
+
+                    .overlay {
+                        position: absolute;
+                        bottom: 0;
+                        background-color: var(--color-primary-transparent);
+                        display: flex;
+                        flex-direction: column;
+                        color: var(--color-light);
+                        width: 100%;
+
+                        .text-format {
+                            margin: 5px 10px 5px 10px;
+
+                            .text-flex {
+                                h6 {
+                                    color: var(--color-light);
+                                    font-size: 14px;
+                                    font-weight: 500;
+                                }
+
+                                p {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            i {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:hover,
+                    &active {
+                        .overlay {
+                            background-color: var(--color-primary);
+
+                            .text-format {
+                                display: flex;
+                                flex-direction: column;
+                                margin: 10px 15px 10px 15px;
+
+                                .text-flex {
+                                    h6 {
+                                        color: var(--color-accent);
+                                        font-weight: 700;
+                                    }
+                                }
+
+                                @include tablet {
+                                    margin: 20px 30px 20px 30px;
+
+                                    i {
+                                        color: var(--color-light);
+                                        display: block;
+                                        font-weight: 500;
+                                        font-size: 64px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                @include desktop {
+                    max-width: 1920px;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    gap: 0px;
+                    padding: 0;
+                }
+            }
+        }
+
+        .container {
+            .logos-area {
+                .logos-format {
+                    margin-top: 40px;
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 30px;
+
+                    img {
+                        width: 30%;
+                    }
+
+                    @include desktop {
+                        margin-top: 80px;
+                        margin-bottom: 70px;
+                        justify-content: space-around;
+
+                        img {
+                            width: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
