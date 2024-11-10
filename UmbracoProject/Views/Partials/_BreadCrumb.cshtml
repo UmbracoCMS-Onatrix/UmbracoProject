@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Web.Common.PublishedModels
+
+@{
+    var siteSettings = Umbraco.ContentAtRoot()
+                            .Where(x => x.ContentType.Alias == "siteSettings")
+                            .FirstOrDefault();
+    
+    var breadcrumbBackgroundImageUrl = siteSettings?.Value<IPublishedContent>("breadcrumbBackgroundImage")?.Url() ?? "/images/default-breadcrumb-bg.svg";
+
+    ViewBag.Title = Model.Value("pageTitle");
+    var pageTitle = ViewBag.Title = Model.Value("pageTitle");
+
+}
+@if(pageTitle != "Home"){
+    <section class="breadcrumb-section">
+        <div class="background" style="background-image:url('@breadcrumbBackgroundImageUrl'); background-position-x: left;">
+            <div class="container">
+                <div class="texts">
+                    <h2>@pageTitle</h2>
+                    <div class="breadcrumbs">                   
+                        <a href="/" class="breadcrumb-link">Home</a> <span>></span>                    
+                        <a href="@pageTitle" class="breadcrumb-current">@pageTitle</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

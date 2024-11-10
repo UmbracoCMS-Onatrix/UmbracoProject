@@ -1,0 +1,70 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco.Cms.Core.Models.PublishedContent;
+
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model.Value("pageTitle");
+
+    var keyPointImageUrl = Model?.Value<IPublishedContent>("keyPointImage")?.Url() ?? null;
+    var financialImageUrl = Model?.Value<IPublishedContent>("financialImage")?.Url() ?? null;
+
+
+}
+
+<section class="risk-management-section">
+            <div class="background">
+                <div class="container">
+                    <div class="main-contents">
+                        <aside>
+                            <div class="about-us">
+                                <div class="text-and-image-area">
+                                    <h3>About us</h3>
+                                <img src="/images/about-us.png" alt="Image of people talking around a table">
+                                <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+                                </div>
+                                <div class="email-box">
+                                    <div class="content">
+                                        <h3>How can we help you?</h3>
+                                        <p>online support 24/7, we are here to help you</p>
+                                        <input class="input-format" type="text" placeholder="E-mail address">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                        <div class="contents">
+                            <img src="@keyPointImageUrl" alt="@Model.Value("keyPointsImageAltText")">
+                            <h3>key point</h3>
+                            <ul>
+                                @foreach (var item in Model.Value<string[]>("keyPointsList"))
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+
+
+
+
+                            <h3>@Model.Value("financialPlanTitle")</h3>
+                            @Model.Value("financialText")
+
+                            <img src="@financialImageUrl" alt="@Model.Value("helpImageAltText")">
+                            <h3>@Model.Value("helpTitle")</h3>
+                            @Model.Value("helpText")
+                        </div>
+                    </div>
+                    <div class="question-area">
+                        <h5>Have a question?</h5>
+                        <form action="submit">
+                            <input id="name" type="text" placeholder="Name">
+                            <input id="email" type="text" placeholder="Email">
+                            <textarea id="question" rows="4" cols="50" type="text" placeholder="Question"></textarea>
+                        </form>
+                        <button class="custom-btn-primary">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>

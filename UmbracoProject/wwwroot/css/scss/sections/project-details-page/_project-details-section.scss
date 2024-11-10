@@ -1,0 +1,156 @@
+.project-details-section {
+    .background {
+        .container {
+            margin-top: 50px;
+            display: flex;
+
+            .main-content {
+                .date{
+                    color: var(--color-note);
+                }
+                flex: 3;
+                border-right: 1px solid var(--color-border-light);
+                padding-right: 100px;
+                max-width: 91cqb;
+
+                .bold {
+                    font-weight: 700;
+                }
+
+                h5 {
+                    margin-top: 35px;
+                }
+
+                p, li {
+                    font-size: 14px;
+                    margin-bottom: 5px;
+                }
+
+                .img-split {
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+
+                    h5 {
+                        margin-top: 0;
+                    }
+
+                    img {
+                        width: 370px;
+                        height: 220px;
+                    }
+                }
+
+                a {
+                    color: var(--color-primary);
+                    font-weight: 400;
+                    font-size: 13px;
+                    text-decoration: none;
+                }
+
+                .current-tags {
+                    display: flex;
+                    align-items: center;
+
+                    h5 {
+                        margin-bottom: 40px;
+                        margin-right: 20px;
+                    }
+
+                    .tag {
+                        background-color: var(--color-accent);
+
+                        &:hover {
+                            background-color: var(--color-secondary);
+                        }
+
+                        border: 1px solid #E6E6E6;
+                        border-radius: 30px;
+                        padding: 10px 16px 10px 16px;
+                    }
+                }
+            }
+
+            aside {
+                flex: 1;
+                padding-left: 50px;
+
+                .tags-area {
+                    margin-bottom: 50px;
+
+                    h3 {
+                        color: var(--color-primary);
+                    }
+
+                    .tags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px 15px;
+
+                        a {
+                            color: var(--color-primary);
+                            font-weight: 400;
+                            font-size: 13px;
+                            text-decoration: none;
+                        }
+
+                        .tag {
+                            &:hover {
+                                background-color: var(--color-accent);
+                            }
+
+                            border: 1px solid #E6E6E6;
+                            border-radius: 30px;
+                            padding: 10px 16px 10px 16px;
+                        }
+                    }
+                }
+
+                .email-box {
+                    height: 223px;
+                    width: 305px;
+                    background-color: var(--color-primary);
+                    color: var(--color-light);
+                    border-radius: 3px;
+
+                    .content {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 25px 25px 25px 25px;
+
+                        h3 {
+                            color: var(--color-accent)
+                        }
+
+                        p {
+                            margin-top: 0px;
+                            margin-bottom: 20px;
+                        }
+
+                        input {
+                            height: 52px;
+                            width: 265px;
+                            border: none;
+                            border-radius: 5px;
+                            padding-left: 20px;
+
+                            &::placeholder {
+                                font-size: 13px;
+                                font-style: italic;
+                            }
+                        }
+
+                        i {
+                            position: absolute;
+                            bottom: 40px;
+                            right: 40px;
+                            font-size: 25px;
+                            color: var(--color-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

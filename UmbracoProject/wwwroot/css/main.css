@@ -250,6 +250,147 @@ h6 {
   }
 }
 
+.footer .background {
+  background-color: var(--color-dark);
+}
+.footer .background .container {
+  height: 65px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer .background .container p {
+  font-size: 14px;
+  padding: 0;
+}
+
+.let-us-know-section .background {
+  background-color: var(--color-gray);
+  padding-top: 40px;
+}
+.let-us-know-section .background .container {
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: 0px bottom, 30% 55%;
+}
+.let-us-know-section .background .container .text-area {
+  margin-left: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.let-us-know-section .background .container .text-area h2 {
+  width: 70%;
+  padding-bottom: 10px;
+}
+.let-us-know-section .background .container .text-area .text-item {
+  padding-bottom: 35px;
+}
+.let-us-know-section .background .container .text-area .text-item .icon-text {
+  display: flex;
+  gap: 5px;
+}
+.let-us-know-section .background .container .text-area .text-item .icon-text p {
+  font-weight: 600;
+}
+.let-us-know-section .background .container .text-area .text-item .icon-text i {
+  color: var(--color-secondary);
+  width: 17px;
+  margin-top: 2px;
+}
+.let-us-know-section .background .container .text-area .text-item .address-format, .let-us-know-section .background .container .text-area .text-item .quote {
+  margin-left: 15px;
+}
+.let-us-know-section .background .container .text-area .text-item p {
+  font-size: 14px;
+  padding: 0;
+}
+.let-us-know-section .background .container .text-area .text-item .quote {
+  font-style: italic;
+}
+
+.breadcrumb-section .background {
+  height: 245px;
+  background-color: var(--color-gray);
+  background-size: cover;
+  background-position-y: 100%;
+}
+.breadcrumb-section .background .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+.breadcrumb-section .background .container .texts .breadcrumbs .breadcrumb-link {
+  color: var(--color-primary);
+}
+.breadcrumb-section .background .container .texts .breadcrumbs span {
+  color: var(--color-primary);
+  font-size: 30px;
+}
+.breadcrumb-section .background .container .texts .breadcrumbs .breadcrumb-current {
+  color: var(--color-secondary);
+}
+.breadcrumb-section .background .container .texts .breadcrumbs a {
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  .breadcrumb-section .background .container .texts .breadcrumbs a {
+    font-size: 20px;
+  }
+  .breadcrumb-section .background .container .texts .breadcrumbs span {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .breadcrumb-section .background .container .texts .breadcrumbs a {
+    font-size: 14px;
+  }
+  .breadcrumb-section .background .container .texts .breadcrumbs span {
+    font-size: 14px;
+  }
+}
+
+.email-box {
+  height: 223px;
+  width: 305px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 3px;
+}
+.email-box .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 20px;
+}
+.email-box .content h4 {
+  color: var(--color-accent);
+}
+.email-box .content p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.email-box .content input {
+  height: 52px;
+  width: 265px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.email-box .content input::placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+.email-box .content i {
+  position: absolute;
+  bottom: 34px;
+  right: 40px;
+  font-size: 25px;
+  color: var(--color-primary);
+}
+
 .hero-section .background {
   background-color: var(--color-gray);
 }
@@ -340,6 +481,12 @@ h6 {
     margin-bottom: 130px;
   }
 }
+.about-us-section .background .container .section-format {
+  display: flex;
+}
+.about-us-section .background .container .section-format .texts-area {
+  flex: 1;
+}
 .about-us-section .background .container .section-format .texts-area h6 {
   text-align: center;
 }
@@ -358,10 +505,56 @@ h6 {
   font-size: 20px;
   font-style: italic;
 }
+.about-us-section .background .container .section-format .form-area {
+  display: none;
+  margin-top: -200px;
+  margin-left: 115px;
+  width: 600px;
+  box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-border-light);
+}
 @media (min-width: 1200px) {
-  .about-us-section .background .container .section-format .texts-area p {
-    width: 52%;
+  .about-us-section .background .container .section-format .form-area {
+    display: flex;
+    flex-direction: column;
   }
+}
+.about-us-section .background .container .section-format .form-area .title-area {
+  background-color: var(--color-primary);
+}
+.about-us-section .background .container .section-format .form-area .title-area h2 {
+  color: var(--color-secondary);
+  margin: 30px;
+}
+.about-us-section .background .container .section-format .form-area p {
+  margin: 30px 30px 0px 30px;
+  font-style: italic;
+}
+.about-us-section .background .container .section-format .form-area form {
+  padding: 10px 30px 0px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.about-us-section .background .container .section-format .form-area input {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid var(--color-border-light);
+  padding-left: 20px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+.about-us-section .background .container .section-format .form-area select {
+  border: 1px solid var(--color-border-light);
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  height: 60px;
+}
+.about-us-section .background .container .section-format .form-area button {
+  margin: 30px;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .our-services-section .background {
@@ -710,16 +903,567 @@ h6 {
   }
 }
 
-.footer .background {
-  background-color: var(--color-dark);
+.ceo-section .background {
+  margin-top: 100px;
 }
-.footer .background .container {
-  height: 65px;
+.ceo-section .background .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90cqb;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+@media (min-width: 1200px) {
+  .ceo-section .background .container {
+    flex-direction: row;
+    width: 100%;
+    gap: 50px;
+    align-items: start;
+    padding-left: 10px;
+    padding-right: 130px;
+  }
+}
+.ceo-section .background .container .image-area p {
+  margin-top: 8px;
+  font-style: italic;
+}
+.ceo-section .background .container .text-area h4 {
+  font-weight: 300;
+  font-style: italic;
+}
+.ceo-section .background .container .text-area p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.great-reviews-section .background {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-gray);
+}
+.great-reviews-section .background .container {
+  padding: 0;
+  display: flex;
+  height: 511px;
+  padding-top: 80px;
+}
+.great-reviews-section .background .container .image-area {
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+.great-reviews-section .background .container .text-area {
+  max-width: 45%;
+}
+.great-reviews-section .background .container .text-area h2 {
+  margin: 0;
+}
+.great-reviews-section .background .container .text-area .quote {
+  padding-top: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: italic;
+}
+.great-reviews-section .background .container .text-area .review-name {
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+.great-reviews-section .background .container .text-area .review-company {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.our-expert-section .background .container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+.our-expert-section .background .container .text-area {
+  text-align: center;
+}
+.our-expert-section .background .container .text-area h2 {
+  margin: 0;
+}
+.our-expert-section .background .container .large-cards {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.our-expert-section .background .container .large-cards .large-card {
+  border: 1px solid var(--color-border-gray);
+}
+.our-expert-section .background .container .large-cards .large-card .card-texts {
+  margin: 20px 0px 15px 20px;
+}
+.our-expert-section .background .container .large-cards .large-card .card-texts p {
+  font-size: 13px;
+  color: var(--color-note);
+}
+.our-expert-section .background .container .small-cards {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.our-expert-section .background .container .small-cards .small-card {
+  border: 1px solid var(--color-border-gray);
+}
+.our-expert-section .background .container .small-cards .small-card .card-texts {
+  margin: 20px 0px 15px 20px;
+}
+.our-expert-section .background .container .small-cards .small-card .card-texts p {
+  font-size: 13px;
+  color: var(--color-note);
+}
+
+.bg-light {
+  background-color: var(--color-light) !important;
+}
+
+.our-services-section .background .container, .projects-section .background .container {
+  display: flex;
+  flex-direction: column;
+}
+.our-services-section .background .container .pagination-area, .projects-section .background .container .pagination-area {
+  margin-top: 50px;
+}
+.our-services-section .background .container .pagination-area .pagination, .projects-section .background .container .pagination-area .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
-.footer .background .container p {
+.our-services-section .background .container .pagination-area .pagination a, .projects-section .background .container .pagination-area .pagination a {
+  text-decoration: none;
+  color: #4B5264;
+  font-weight: 600;
+  font-size: 18px;
+}
+.our-services-section .background .container .pagination-area .pagination .previous, .projects-section .background .container .pagination-area .pagination .previous {
+  color: var(--color-border-gray);
+}
+.our-services-section .background .container .pagination-area .pagination .active-number, .projects-section .background .container .pagination-area .pagination .active-number {
+  border: 1px solid var(--color-border-gray);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4B5264;
+}
+
+.risk-management-section .background .container {
+  margin-top: 80px;
+}
+.risk-management-section .background .container .main-contents {
+  display: flex;
+}
+.risk-management-section .background .container .main-contents h3 {
+  font-weight: 600;
+}
+.risk-management-section .background .container .main-contents p {
+  margin-top: 25px;
   font-size: 14px;
-  padding: 0;
+}
+.risk-management-section .background .container .main-contents aside {
+  border-right: 1px solid var(--color-border-light);
+  flex: 25%;
+  margin-right: 50px;
+  display: flex;
+}
+.risk-management-section .background .container .main-contents aside .about-us p {
+  max-width: 75%;
+  margin-bottom: 40px;
+}
+.risk-management-section .background .container .main-contents aside .email-box {
+  height: 223px;
+  width: 305px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 3px;
+}
+.risk-management-section .background .container .main-contents aside .email-box .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px 25px 25px;
+}
+.risk-management-section .background .container .main-contents aside .email-box .content h3 {
+  color: var(--color-accent);
+}
+.risk-management-section .background .container .main-contents aside .email-box .content p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.risk-management-section .background .container .main-contents aside .email-box .content input {
+  height: 52px;
+  width: 265px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.risk-management-section .background .container .main-contents aside .email-box .content input::placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+.risk-management-section .background .container .main-contents aside .email-box .content i {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 25px;
+  color: var(--color-primary);
+}
+.risk-management-section .background .container .main-contents .contents {
+  flex: 65%;
+  margin-right: 40px;
+}
+.risk-management-section .background .container .main-contents .contents h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.risk-management-section .background .container .main-contents .contents p, .risk-management-section .background .container .main-contents .contents li {
+  max-width: 90%;
+  margin: 0;
+  font-size: 14px;
+}
+.risk-management-section .background .container .question-area {
+  max-width: 80%;
+}
+.risk-management-section .background .container .question-area form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "name email" "question question";
+  gap: 20px 30px;
+}
+.risk-management-section .background .container .question-area form input, .risk-management-section .background .container .question-area form textarea {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid var(--color-border-light);
+  padding-left: 20px;
+}
+.risk-management-section .background .container .question-area form input#name, .risk-management-section .background .container .question-area form input #email, .risk-management-section .background .container .question-area form textarea#name, .risk-management-section .background .container .question-area form textarea #email {
+  height: 50px;
+}
+.risk-management-section .background .container .question-area form input#question, .risk-management-section .background .container .question-area form textarea#question {
+  padding-top: 10px;
+}
+.risk-management-section .background .container .question-area form #name {
+  grid-area: name;
+}
+.risk-management-section .background .container .question-area form #email {
+  grid-area: email;
+}
+.risk-management-section .background .container .question-area form #question {
+  grid-area: question;
+}
+.risk-management-section .background .container .question-area .custom-btn-primary {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.projects-section .background .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.projects-section .background .container .main-content-area {
+  flex: 3;
+}
+.projects-section .background .container .main-content-area .cards .card {
+  gap: 30px;
+  border: none;
+  border-radius: 2px;
+  border-bottom: 1px solid var(--color-border-light);
+  border-right: 1px solid var(--color-border-light);
+  padding-bottom: 15px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.projects-section .background .container .main-content-area .cards .card img {
+  max-width: 370px;
+  max-height: 220px;
+}
+.projects-section .background .container .main-content-area .cards .card .card-texts .date {
+  font-size: 14px;
+  color: var(--color-note);
+}
+.projects-section .background .container .main-content-area .cards .card .card-texts h3 {
+  color: var(--color-primary);
+}
+.projects-section .background .container .main-content-area .cards .card .card-texts p,
+.projects-section .background .container .main-content-area .cards .card .card-texts a {
+  max-width: 35cqb;
+  font-size: 14px;
+}
+.projects-section .background .container .main-content-area .cards .card .card-texts a {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+.projects-section .background .container .main-content-area .cards .card .card-texts .icon-format {
+  margin-left: 10px;
+  color: var(--color-secondary);
+}
+.projects-section .background .container aside {
+  flex: 1;
+  padding-left: 50px;
+}
+.projects-section .background .container aside .tags-area {
+  margin-bottom: 50px;
+}
+.projects-section .background .container aside .tags-area h3 {
+  color: var(--color-primary);
+}
+.projects-section .background .container aside .tags-area .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+}
+.projects-section .background .container aside .tags-area .tags a {
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 13px;
+  text-decoration: none;
+}
+.projects-section .background .container aside .tags-area .tags .tag {
+  border: 1px solid #E6E6E6;
+  border-radius: 30px;
+  padding: 10px 16px 10px 16px;
+}
+.projects-section .background .container aside .tags-area .tags .tag:hover {
+  background-color: var(--color-accent);
+}
+
+.project-details-section .background .container {
+  margin-top: 50px;
+  display: flex;
+}
+.project-details-section .background .container .main-content {
+  flex: 3;
+  border-right: 1px solid var(--color-border-light);
+  padding-right: 100px;
+  max-width: 91cqb;
+}
+.project-details-section .background .container .main-content .date {
+  color: var(--color-note);
+}
+.project-details-section .background .container .main-content .bold {
+  font-weight: 700;
+}
+.project-details-section .background .container .main-content h5 {
+  margin-top: 35px;
+}
+.project-details-section .background .container .main-content p, .project-details-section .background .container .main-content li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.project-details-section .background .container .main-content .img-split {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.project-details-section .background .container .main-content .img-split h5 {
+  margin-top: 0;
+}
+.project-details-section .background .container .main-content .img-split img {
+  width: 370px;
+  height: 220px;
+}
+.project-details-section .background .container .main-content a {
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 13px;
+  text-decoration: none;
+}
+.project-details-section .background .container .main-content .current-tags {
+  display: flex;
+  align-items: center;
+}
+.project-details-section .background .container .main-content .current-tags h5 {
+  margin-bottom: 40px;
+  margin-right: 20px;
+}
+.project-details-section .background .container .main-content .current-tags .tag {
+  background-color: var(--color-accent);
+  border: 1px solid #E6E6E6;
+  border-radius: 30px;
+  padding: 10px 16px 10px 16px;
+}
+.project-details-section .background .container .main-content .current-tags .tag:hover {
+  background-color: var(--color-secondary);
+}
+.project-details-section .background .container aside {
+  flex: 1;
+  padding-left: 50px;
+}
+.project-details-section .background .container aside .tags-area {
+  margin-bottom: 50px;
+}
+.project-details-section .background .container aside .tags-area h3 {
+  color: var(--color-primary);
+}
+.project-details-section .background .container aside .tags-area .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+}
+.project-details-section .background .container aside .tags-area .tags a {
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 13px;
+  text-decoration: none;
+}
+.project-details-section .background .container aside .tags-area .tags .tag {
+  border: 1px solid #E6E6E6;
+  border-radius: 30px;
+  padding: 10px 16px 10px 16px;
+}
+.project-details-section .background .container aside .tags-area .tags .tag:hover {
+  background-color: var(--color-accent);
+}
+.project-details-section .background .container aside .email-box {
+  height: 223px;
+  width: 305px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 3px;
+}
+.project-details-section .background .container aside .email-box .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px 25px 25px;
+}
+.project-details-section .background .container aside .email-box .content h3 {
+  color: var(--color-accent);
+}
+.project-details-section .background .container aside .email-box .content p {
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.project-details-section .background .container aside .email-box .content input {
+  height: 52px;
+  width: 265px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 20px;
+}
+.project-details-section .background .container aside .email-box .content input::placeholder {
+  font-size: 13px;
+  font-style: italic;
+}
+.project-details-section .background .container aside .email-box .content i {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  font-size: 25px;
+  color: var(--color-primary);
+}
+
+.contact-section .background {
+  background-repeat: no-repeat;
+}
+.contact-section .background .container {
+  padding-top: 300px;
+}
+.contact-section .background .container .contact-us-area {
+  border: 1px solid var(--color-border-light);
+  box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 570px;
+  background-color: var(--color-light);
+  padding: 70px;
+  margin-bottom: 100px;
+}
+.contact-section .background .container .contact-us-area .texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-section .background .container .contact-us-area .texts h2 {
+  margin: 0;
+}
+.contact-section .background .container .contact-us-area .texts .quote {
+  font-style: italic;
+  font-size: 14px;
+}
+.contact-section .background .container .contact-us-area .texts .quote.quote-top {
+  margin-top: 20px;
+}
+.contact-section .background .container .contact-us-area .texts .quote.quote-bottom {
+  margin-bottom: 20px;
+}
+.contact-section .background .container .contact-us-area .form-area {
+  text-align: center;
+}
+.contact-section .background .container .contact-us-area .form-area form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "name phone" "email consulting";
+  gap: 20px 30px;
+}
+.contact-section .background .container .contact-us-area .form-area form input {
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 300;
+  border: 1px solid var(--color-border-light);
+  padding-left: 20px;
+}
+.contact-section .background .container .contact-us-area .form-area form input#name, .contact-section .background .container .contact-us-area .form-area form input #email, .contact-section .background .container .contact-us-area .form-area form input #phone {
+  height: 50px;
+}
+.contact-section .background .container .contact-us-area .form-area form select {
+  border: 1px solid var(--color-border-light);
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 300;
+}
+.contact-section .background .container .contact-us-area .form-area form #name {
+  grid-area: name;
+}
+.contact-section .background .container .contact-us-area .form-area form #email {
+  grid-area: email;
+}
+.contact-section .background .container .contact-us-area .form-area form #phone {
+  grid-area: phone;
+}
+.contact-section .background .container .contact-us-area .form-area form #consulting {
+  grid-area: consulting;
+}
+.contact-section .background .container .contact-us-area .form-area .custom-btn-primary {
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.contact-section .background .container .logos-area .logos-format {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.contact-section .background .container .logos-area .logos-format img {
+  width: 30%;
+}
+@media (min-width: 1200px) {
+  .contact-section .background .container .logos-area .logos-format {
+    margin-top: 80px;
+    margin-bottom: 70px;
+    justify-content: space-around;
+  }
+  .contact-section .background .container .logos-area .logos-format img {
+    width: auto;
+  }
 }

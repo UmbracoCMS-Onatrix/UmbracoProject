@@ -1,0 +1,48 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@using Umbraco.Cms.Web.Common.PublishedModels
+@inject Umbraco.Cms.Web.Common.UmbracoHelper UmbracoHelper
+
+
+@{
+    var partialContent = UmbracoHelper.ContentAtRoot()
+                          .DescendantsOrSelfOfType("letUsKnowSection")
+                          .FirstOrDefault();
+    var letUsKnowImageUrl = partialContent?.Value<IPublishedContent>("letUsKnowImage")?.Url();
+    var letUsKnowBgImage1Url = partialContent?.Value<IPublishedContent>("letUsKnowBgImage1")?.Url();
+    var letUsKnowBgImage2Url = partialContent?.Value<IPublishedContent>("letUsKnowBgImage2")?.Url();
+    var pageTitle = ViewBag.Title = Model.Value("pageTitle");
+
+
+}
+@if (pageTitle != "Home"){
+<section class="let-us-know-section">
+    <div class="background">
+        <div class="container" style="background-image: url(@letUsKnowBgImage1Url), url(@letUsKnowBgImage2Url);">
+            <div class="image-area" >
+                <img src="@letUsKnowImageUrl" alt="@partialContent?.Value("letUsKnowImageAltText")">
+            </div>
+            <div class="text-area">
+                    <h2>@partialContent?.Value("letUsKnowTitle")</h2>
+                    <div class="text-item">
+                        <div class="icon-text">
+                        <i class="fa-light fa-location-dot"></i><p>@partialContent?.Value("letUsKnowLocation")</p>
+                        </div>
+                    <p class="address-format">@partialContent?.Value("letUsKnowAddress")</p>
+                    </div>
+                    <div class="text-item">
+                        <div class="icon-text">
+                        <i class="fa-regular fa-phone-flip"></i><p>@partialContent?.Value("letUsKnowPhoneText")</p>
+                        </div>
+                    <p class="quote">@partialContent?.Value("letUsKnowPhoneNumber")</p>
+                    </div>
+                    <div class="text-item">
+                        <div class="icon-text">
+                        <i class="fa-light fa-envelope"></i><p>@partialContent?.Value("letUsKnowEmailText")</p>
+                        </div>
+                    <p class="quote">@partialContent?.Value("letUsKnowEmailAddress")</p>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+}

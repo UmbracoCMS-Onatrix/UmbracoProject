@@ -2,6 +2,9 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
 	Layout = null;
+
+    var currentPage = Umbraco.AssignedContentItem; 
+    var showPartialView = currentPage?.Value<string>("showPartialView");   
 }
 
 <!DOCTYPE html>
@@ -17,13 +20,25 @@
 </head>
 <body>
     <div class="wrapper">
-        <header></header>
+        @showPartialView
+        @Html.Partial("Header")        
 
 		<main>
-			@RenderBody()
-		</main>
+            @if (showPartialView == "Top")
+            {
+                @await Html.PartialAsync("components/_LetUsKnowSection");
+            }
 
-		<footer></footer>
+			@RenderBody()
+
+            @if (showPartialView == "Bottom")
+            {
+                @await Html.PartialAsync("components/_LetUsKnowSection");
+            }
+        </main>
+
+        @Html.Partial("Footer")
+
 	</div>
 
 	<script src="/scripts/main.js"></script>

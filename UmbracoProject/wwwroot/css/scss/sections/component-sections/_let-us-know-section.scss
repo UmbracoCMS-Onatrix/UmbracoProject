@@ -1,0 +1,47 @@
+.let-us-know-section{
+    .background{
+        background-color: var(--color-gray);
+        padding-top: 40px;
+        .container{
+            display: flex;
+            background-repeat: no-repeat;
+            background-position: 0px bottom, 30% 55%;
+            .text-area{
+
+                margin-left: 220px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2{
+                    width: 70%;
+                    padding-bottom: 10px;
+                }
+                .text-item{
+                    padding-bottom: 35px;
+                    .icon-text{
+                        display: flex;
+                        gap: 5px;
+                        p{
+                            font-weight: 600;
+                        }
+                        i{
+                            color: var(--color-secondary);
+                            width: 17px;
+                            margin-top: 2px;
+                        }
+                    }
+                    .address-format,.quote{
+                        margin-left: 15px;
+                    }
+                    p{
+                        font-size: 14px;
+                        padding: 0;
+                    }
+                    .quote{
+                        font-style: italic;
+                    }
+                }
+            }
+        }
+    }
+}

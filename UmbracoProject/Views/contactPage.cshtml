@@ -1,0 +1,56 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model.Value("pageTitle");
+
+
+    var logoImage1 = Model?.Value<IPublishedContent>("logo1Image")?.Url() ?? null;
+    var logoImage2 = Model?.Value<IPublishedContent>("logo2Image")?.Url() ?? null;
+    var logoImage3 = Model?.Value<IPublishedContent>("logo3Image")?.Url() ?? null;
+    var logoImage4 = Model?.Value<IPublishedContent>("logo4Image")?.Url() ?? null;
+    var logoImage5 = Model?.Value<IPublishedContent>("logo5Image")?.Url() ?? null;
+    var logoImage6 = Model?.Value<IPublishedContent>("logo6Image")?.Url() ?? null;
+    var backgroundImageUrl = Model?.Value<IPublishedContent>("backgroundImage")?.Url() ?? null;
+
+}
+<section class="contact-section">
+                <div class="background" style="background-image: url(@backgroundImageUrl);">
+                    <div class="container">
+                        <div class="contact-us-area">
+                            <div class="texts">
+                                <h6>Request a call back</h6>
+                                <h2>Let us know about your </h2>
+                                <h2>next project</h2>
+                                <p class="quote quote-top">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas </p>
+                                <p class="quote quote-bottom">, ligula semper sagittis lobortis, eros metus efficitur purus</p>
+                            </div>
+                            <div class="form-area">
+                                <form action="submit">
+                                    <input id="name" type="text" placeholder="Name">
+                                    <input id="phone" type="text" placeholder="Phone">
+                                    <input type="text" id="email" placeholder="Email address">
+                                    <select name="options" id="consulting">
+                                        <option value="Financial consulting">Financial consulting</option>
+                                        <option value="Assurance & Audits">Assurance & Audits</option>
+                                        <option value="Statistic advisors">Statistic advisors</option>
+                                    </select>
+                                 </form>
+                                <button class="custom-btn-primary">Submit</button>
+                            </div>
+
+                        </div>
+
+                        <div class="logos-area">
+                            <div class="logos-format">
+                                <img src="@logoImage1" alt="@Model?.Value("logoImage1AltText")">
+                                <img src="@logoImage2" alt="@Model?.Value("logoImage2AltText")">
+                                <img src="@logoImage3" alt="@Model?.Value("logoImage3AltText")">
+                                <img src="@logoImage4" alt="@Model?.Value("logoImage4AltText")">
+                                <img src="@logoImage5" alt="@Model?.Value("logoImage5AltText")">
+                                <img src="@logoImage6" alt="@Model?.Value("logoImage6AltText")">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>

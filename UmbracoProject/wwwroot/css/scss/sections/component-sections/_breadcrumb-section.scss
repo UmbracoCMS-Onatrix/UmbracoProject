@@ -1,0 +1,57 @@
+.breadcrumb-section {
+    .background {
+        height: 245px;
+        background-color: var(--color-gray);
+        background-size: cover;
+        background-position-y: 100%;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+
+            .texts {
+                .breadcrumbs {
+                    .breadcrumb-link {
+                        color: var(--color-primary);
+                    }
+
+                    span {
+                        color: var(--color-primary);
+                        font-size: 30px;
+                    }
+
+                    .breadcrumb-current {
+                        color: var(--color-secondary);
+                    }
+
+                    a {
+                        font-size: 30px;
+                    }
+
+                    @include tablet {
+                        a {
+                            font-size: 20px;
+                        }
+
+                        span {
+                            font-size: 20px;
+                        }
+                    }
+
+                    @include desktop {
+                        a {
+                            font-size: 14px;
+                        }
+
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

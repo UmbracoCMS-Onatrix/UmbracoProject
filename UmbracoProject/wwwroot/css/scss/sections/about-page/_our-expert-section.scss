@@ -1,0 +1,48 @@
+.our-expert-section{
+    .background{
+        .container{
+            display: flex;
+            flex-direction: column;
+            margin-top: 100px;
+            margin-bottom: 80px;
+            .text-area{
+                text-align: center;
+                h2{
+                    margin: 0;
+                }
+            }
+            .large-cards{
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .large-card{
+                    border: 1px solid var(--color-border-gray);
+                    .card-texts{
+                        margin: 20px 0px 15px 20px;
+                        p{
+                            font-size: 13px;
+                            color: var(--color-note);
+                        }
+                    }
+                }
+            }
+            .small-cards{
+                margin-top: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .small-card{
+                    border: 1px solid var(--color-border-gray);
+                    .card-texts{
+                            margin: 20px 0px 15px 20px;
+                            p{
+                                font-size: 13px;
+                                color: var(--color-note);
+                            }
+                    }
+                }
+            }
+        }
+    }
+}

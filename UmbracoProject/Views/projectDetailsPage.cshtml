@@ -1,0 +1,51 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model.Value("pageTitle");
+
+    var detailsHeadlineImageUrl = Model?.Value<IPublishedContent>("detailsHeadlineImage")?.Url() ?? null;
+    var detailsSmallImageUrl = Model?.Value<IPublishedContent>("detailsSmallImage")?.Url() ?? null;
+    var detailsBottomImageUrl = Model?.Value<IPublishedContent>("detailsBottomImage")?.Url() ?? null;
+
+}
+<section class="project-details-section">
+    <div class="background">
+        <div class="container">
+            <div class="main-content">
+                <p class="date"><i class="fa-sharp fa-light fa-calendar-range"></i> @Model.Value("detailsDate")</p>
+                <p class="bold">@Model.Value("detailsHeadline1")</p>
+                <p class="bold">@Model.Value("detailsHeadline2")</p>
+                <img src="@detailsHeadlineImageUrl" alt="@Model.Value("detailsHeadlineImageAltText")">
+                @Model.Value("detailsSuggestionText")
+                <div class="img-split">
+                    <img src="@detailsSmallImageUrl" alt="@Model.Value("detailsSmallImageAltText")">
+                    <div class="texts">
+                        @Model.Value("detailsSmallText")
+                    </div>
+                </div>
+                @Model.Value("detailsNullamText")
+                <img src="@detailsBottomImageUrl" alt="@Model.Value("detailsBottomImageAltText")">
+                @Model.Value("detailsBottomText")
+                
+                <div class="current-tags">
+                    <h5>Tags:</h5>
+                    <div class="tags">
+                        @{ ViewData["ShowAllTags"] = false; }
+                        @Html.Partial("TagCloud")
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <div class="tags-area">
+                    <h3>Tags</h3>
+                    @{ ViewData["ShowAllTags"] = true; }
+                    @Html.Partial("TagCloud")
+                </div>
+                @Html.Partial("Partials/_Helpform")
+
+            </aside>
+        </div>
+    </div>
+</section>
+

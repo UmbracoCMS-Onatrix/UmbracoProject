@@ -1,0 +1,132 @@
+.risk-management-section{
+    .background{
+        .container{
+            margin-top: 80px;
+            .main-contents{
+                h3{
+                    font-weight:600;
+                }
+                p{
+                    margin-top: 25px;
+                    font-size: 14px;
+                }
+                display: flex;
+
+                aside{
+                    border-right: 1px solid var(--color-border-light);
+                    flex: 25%;
+                    margin-right: 50px;
+                    display: flex;
+
+                    .about-us{
+                        p{
+                            max-width: 75%;
+                            margin-bottom: 40px;
+                        }
+                    }
+                    .email-box{
+                        height: 223px;
+                        width: 305px;
+                        background-color: var(--color-primary);
+                        color: var(--color-light);
+                        border-radius: 3px;
+                        .content{
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 25px 25px 25px 25px;
+                            h3{
+
+                                color: var(--color-accent)
+                            }
+                            p{
+
+                                margin-top: 0px;
+                                margin-bottom: 20px;
+                            }
+                            input{
+                                height: 52px;
+                                width: 265px;
+                                border: none;
+                                border-radius: 5px;
+                                padding-left: 20px;
+
+                                &::placeholder{
+                                    font-size: 13px;
+                                    font-style: italic;
+
+                                }
+                            }
+                            i{
+                                position: absolute;
+                                bottom: 40px;
+                                right: 40px;
+                                font-size: 25px;
+                                color: var(--color-primary);
+                            }
+
+                        }
+                    }
+
+                }
+                .contents{
+                    flex: 65%;
+                    margin-right: 40px;
+
+                    h3{
+
+                        font-size: 25px;
+                        font-weight: 700;
+                        margin-top: 30px;
+                    }
+                    p,li{
+                        max-width: 90%;
+                        margin: 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .question-area{
+                max-width: 80%;
+                form{
+
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto auto;
+                    grid-template-areas:
+                    "name email"
+                    "question question";
+                    gap: 20px 30px;
+
+                    input,textarea{
+                        font-style: italic;
+                        font-size: 14px;
+                        font-weight: 300;
+                        border: 1px solid var(--color-border-light);
+                        padding-left: 20px;
+                        &#name,#email{
+                            height: 50px;
+                        }
+                        &#question{
+                            padding-top: 10px;
+
+                        }
+                    }
+                    #name{
+                        grid-area: name;
+                    }
+                    #email{
+                        grid-area: email;
+                    }
+                    #question{
+                        grid-area: question;
+                    }
+                }
+                .custom-btn-primary{
+                    margin-top: 20px;
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+}

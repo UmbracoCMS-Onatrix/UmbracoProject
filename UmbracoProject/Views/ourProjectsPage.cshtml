@@ -1,0 +1,79 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model.Value("pageTitle");
+
+
+    var cardImageUrl1 = Model?.Value<IPublishedContent>("cardImage1")?.Url() ?? null;
+    var cardImageUrl2 = Model?.Value<IPublishedContent>("cardImage2")?.Url() ?? null;
+    var cardImageUrl3 = Model?.Value<IPublishedContent>("cardImage3")?.Url() ?? null;
+    var cardImageUrl4 = Model?.Value<IPublishedContent>("cardImage4")?.Url() ?? null;
+        
+
+}
+<section class="projects-section">
+    <div class="background">
+        <div class="container">
+            <div class="main-content-area">
+                <div class="cards">
+                    <div class="card">
+                        <img src="@cardImageUrl1" alt="@Model.Value("cardImageAltText1")">
+                        <div class="card-texts">
+                            <h3>@Model.Value("cardTitle1")</h3>
+                            <p class="date"><i class="fa-sharp fa-light fa-calendar-range"></i> @Model.Value("cardDate1")</p>
+                            <p>@Model.Value("cardText1")</p>
+                            <a href="@Model.Value("cardReadMoreUrl1")" class="read-m">Read more <i class="icon-format fa-sharp fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="@cardImageUrl2" alt="@Model.Value("cardImageAltText2")">
+                        <div class="card-texts">
+                            <h3>@Model.Value("cardTitle2")</h3>
+                            <p class="date"><i class="fa-sharp fa-light fa-calendar-range"></i> @Model.Value("cardDate2")</p>
+                            <p>@Model.Value("cardText2")</p>
+                            <a href="@Model.Value("cardReadMoreUrl2")" class="read-m">Read more <i class="icon-format fa-sharp fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="@cardImageUrl3" alt="@Model.Value("cardImageAltText3")">
+                        <div class="card-texts">
+                            <h3>@Model.Value("cardTitle3")</h3>
+                            <p class="date"><i class="fa-sharp fa-light fa-calendar-range"></i> @Model.Value("cardDate3")</p>
+                            <p>@Model.Value("cardText3")</p>
+                            <a href="@Model.Value("cardReadMoreUrl3")" class="read-m">Read more <i class="icon-format fa-sharp fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="@cardImageUrl4" alt="@Model.Value("cardImageAltText4")">
+                        <div class="card-texts">
+                            <h3>@Model.Value("cardTitle4")</h3>
+                            <p class="date"><i class="fa-sharp fa-light fa-calendar-range"></i> @Model.Value("cardDate4")</p>
+                            <p>@Model.Value("cardText4")</p>
+                            <a href="@Model.Value("cardReadMoreUrl4")" class="read-m">Read more <i class="icon-format fa-sharp fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pagination-area">
+                    <div class="pagination">
+                        <a href="" class="previous">Prev</a>
+                        <a href="" class="active-number">1</a>
+                        <a href="" class="number">2</a>
+                        <a href="" class="next">Next</a>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <div class="tags-area">
+                    <h3>Tags</h3>
+                    @{
+                        ViewData["ShowAllTags"] = true;
+                    }
+                    @Html.Partial("TagCloud")
+                </div>
+                @Html.Partial("Partials/_Helpform")
+            </aside>
+        </div>
+    </div>
+</section>

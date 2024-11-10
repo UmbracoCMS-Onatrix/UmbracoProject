@@ -1,0 +1,187 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model.Value("pageTitle");
+
+    var ceoImageUrl = Model?.Value<IPublishedContent>("ceoImage")?.Url() ?? null;
+
+    var greatReviewsImageUrl = Model?.Value<IPublishedContent>("greatReviewsImage")?.Url() ?? null;
+
+
+
+
+
+    var largeCardImageUrl1 = Model?.Value<IPublishedContent>("largeCardImage1")?.Url() ?? null;
+    var largeCardImageUrl2 = Model?.Value<IPublishedContent>("largeCardImage2")?.Url() ?? null;
+    var largeCardImageUrl3 = Model?.Value<IPublishedContent>("largeCardImage3")?.Url() ?? null;
+
+    var smallCardImageUrl1 = Model?.Value<IPublishedContent>("smallCardImage1")?.Url() ?? null;
+    var smallCardImageUrl2 = Model?.Value<IPublishedContent>("smallCardImage2")?.Url() ?? null;
+    var smallCardImageUrl3 = Model?.Value<IPublishedContent>("smallCardImage3")?.Url() ?? null;
+    var smallCardImageUrl4 = Model?.Value<IPublishedContent>("smallCardImage4")?.Url() ?? null;
+
+    string ratingText = Model.Value<string>("greatReviewsRating");
+
+    int rating = 0;
+
+
+
+    switch (ratingText)
+
+    {
+
+        case "1 Star":
+
+            rating = 1;
+
+            break;
+
+        case "2 Stars":
+
+            rating = 2;
+
+            break;
+
+        case "3 Stars":
+
+            rating = 3;
+
+            break;
+
+        case "4 Stars":
+
+            rating = 4;
+
+            break;
+
+        case "5 Stars":
+
+            rating = 5;
+
+            break;
+
+        default:
+
+            rating = 0;
+
+            break;
+
+    }
+}
+
+<section class="ceo-section">
+    <div class="background">
+        <div class="container">
+            <div class="image-area">
+                <img src="@ceoImageUrl" alt="Picture of Tina Fox - CEO & Founder at Onatrix">
+                <p class="quote">@Model.Value("ceoImageText")</p>
+            </div>
+            <div class="text-area">
+                <h4>@Model.Value("ceoTextHeadLine")</h4>
+                <p>@Model.Value("ceoParagraph1")</p>
+                <p>@Model.Value("ceoParagraph2")</p>
+                <p>@Model.Value("ceoParagraph3")</p>
+                <p>@Model.Value("ceoParagraph4")</p>
+                <p>@Model.Value("ceoParagraph5")</p>
+                <p>@Model.Value("ceoParagraph6")</p>
+                <p>@Model.Value("ceoParagraph7")</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="great-reviews-section">
+    <div class="background">
+        <div class="container">
+
+            <div class="text-area">
+                <h6>@Model.Value("greatReviewsTitle")</h6>
+                <h2>@Model.Value("greatReviewsHeadLine1")</h2>
+                <h2>@Model.Value("greatReviewsHeadLine2")</h2>
+                <p class="quote">@Model.Value("greatReviewsQuote")</p>
+                <p class="rating">
+                    @for (int i = 0; i < rating; i++)
+
+                    {
+                        <i class="fa-solid fa-star"></i>
+                    }
+                    @for (int i = rating; i < 5; i++)
+
+                    {
+                        <i class="far fa-star"></i>
+                    }
+                </p>
+                <p class="review-name">@Model.Value("greatReviewsReviewName")</p>
+                <p class="review-company">@Model.Value("greatReviewsReviewCompany")</p>
+            </div>
+            <div class="image-area">
+                <img src="@greatReviewsImageUrl" alt="@Model.Value("greatReviewsImageAltText")">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-expert-section">
+    <div class="background">
+        <div class="container">
+            <div class="text-area">
+                <h6>@Model.Value("ourExpertTitle")</h6>
+                <h2>@Model.Value("ourExpertHeadline1")</h2>
+                <h2>@Model.Value("ourExpertHeadline2")</h2>
+            </div>
+            <div class="large-cards">
+                <div class="large-card">
+                    <img src="@largeCardImageUrl1" alt="@Model.Value("largeCardImageAltText1")">
+                    <div class="card-texts">
+                        <h3>@Model.Value("largeCardName1")</h3>
+                        <p>@Model.Value("largeCardJobTitle1")</p>
+                    </div>
+                </div>
+                <div class="large-card">
+                    <img src="@largeCardImageUrl2" alt="@Model.Value("largeCardImageAltText2")">
+                    <div class="card-texts">
+                        <h3>@Model.Value("largeCardName2")</h3>
+                        <p>@Model.Value("largeCardJobTitle2")</p>
+                    </div>
+                </div>
+                <div class="large-card">
+                    <img src="@largeCardImageUrl3" alt="@Model.Value("largeCardImageAltText3")">
+                    <div class="card-texts">
+                        <h3>@Model.Value("largeCardName3")</h3>
+                        <p>@Model.Value("largeCardJobTitle3")</p>
+                    </div>
+                </div>
+            </div>
+            <div class="small-cards">
+                <div class="small-card">
+                    <img src="@smallCardImageUrl1" alt="@Model.Value("smallCardImageAltText1")">
+                    <div class="card-texts">
+                        <h5>@Model.Value("smallCardName1")</h5>
+                        <p>@Model.Value("smallCardJobTitle1")</p>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <img src="@smallCardImageUrl2" alt="@Model.Value("smallCardImageAltText2")">
+                    <div class="card-texts">
+                        <h5>@Model.Value("smallCardName2")</h5>
+                        <p>@Model.Value("smallCardJobTitle2")</p>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <img src="@smallCardImageUrl3" alt="@Model.Value("smallCardImageAltText3")">
+                    <div class="card-texts">
+                        <h5>@Model.Value("smallCardName3")</h5>
+                        <p>@Model.Value("smallCardJobTitle3")</p>
+                    </div>
+                </div>
+                <div class="small-card">
+                    <img src="@smallCardImageUrl4" alt="@Model.Value("smallCardImageAltText4")">
+                    <div class="card-texts">
+                        <h5>@Model.Value("smallCardName4")</h5>
+                        <p>@Model.Value("smallCardJobTitle4")</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

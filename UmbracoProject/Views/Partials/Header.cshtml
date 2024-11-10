@@ -1,0 +1,48 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var siteSettings = Umbraco.ContentAtRoot()
+                            .Where(x => x.ContentType.Alias == "siteSettings")
+                            .FirstOrDefault();
+
+    var logotypeImageUrl = siteSettings?.Value<IPublishedContent>("logotypeImage")?.Url();
+    var address = siteSettings?.Value<string>("address");
+    var facebook = siteSettings?.Value<string>("facebookUrl");
+    var twitter = siteSettings?.Value<string>("twitterUrl");
+    var linkedin = siteSettings?.Value<string>("linkedinUrl");
+}
+
+
+<header>
+    <div class="header">
+        <div class="header-bar">
+            <div class="container">
+                <div>
+                    <p>@address</p>
+                </div>
+                <div class="social-media">
+                    <a href="@facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="@twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="@linkedin" target="_blank" class="border-right"><i class="fa-brands fa-linkedin "></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="header-section">
+            <div class="container ">
+                <div class="logo-border">
+                    <a href="/"><img src="@logotypeImageUrl" alt="Logo"></a>
+                </div>
+                <div class="navbar">
+                    <a href="/about">About</a>
+                    <a href="/services">Services</a>
+                    <a href="/projects">Projects</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/search" class="search-mobile"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+                <div class="search-large">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

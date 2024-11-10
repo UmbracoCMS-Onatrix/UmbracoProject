@@ -1,0 +1,100 @@
+.projects-section {
+    .background {
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 100px;
+
+            .main-content-area {
+                flex: 3;
+
+                .cards {
+                    .card {
+                        gap: 30px;
+                        border: none;
+                        border-radius: 2px;
+                        border-bottom: 1px solid var(--color-border-light);
+                        border-right: 1px solid var(--color-border-light);
+                        ;
+                        padding-bottom: 15px;
+                        padding-top: 15px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        img {
+                            max-width: 370px;
+                            max-height: 220px;
+                        }
+
+                        .card-texts {
+
+                            .date {
+                                font-size: 14px;
+                                color: var(--color-note);
+                            }
+
+                            h3 {
+                                color: var(--color-primary);
+                            }
+
+                            p,
+                            a {
+                                max-width: 35cqb;
+                                font-size: 14px
+                            }
+
+                            a {
+                                font-weight: 600;
+                                color: var(--color-primary)
+                            }
+
+                            .icon-format {
+                                margin-left: 10px;
+                                color: var(--color-secondary)
+                            }
+                        }
+                    }
+                }
+            }
+
+            aside {
+                flex: 1;
+                padding-left: 50px;
+
+                .tags-area {
+                    margin-bottom: 50px;
+
+                    h3 {
+                        color: var(--color-primary);
+                    }
+
+                    .tags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 10px 15px;
+
+                        a {
+                            color: var(--color-primary);
+                            font-weight: 400;
+                            font-size: 13px;
+                            text-decoration: none;
+                        }
+
+                        .tag {
+                            &:hover {
+                                background-color: var(--color-accent);
+                            }
+
+                            border: 1px solid #E6E6E6;
+                            border-radius: 30px;
+                            padding: 10px 16px 10px 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

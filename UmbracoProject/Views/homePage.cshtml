@@ -60,7 +60,24 @@
                     <img src="@aboutSectionSignatureImage" alt="@Model?.Value("aboutSignatureImageAltText")">
                     <p>@Model?.Value("aboutSignature")</p>
                 </div>
+                 <div class="form-area">
+                    <div class="title-area">
+                        <h2>Request a call back</h2>
+                    </div>
+                    <p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat</p>
 
+                    <form action="submit">
+                        <input id="name" type="text" placeholder="Name">
+                        <input type="text" id="email" placeholder="Email address">
+                        <input id="phone" type="text" placeholder="Phone">
+                        <select name="options" id="consulting">
+                            <option value="Financial consulting">Financial consulting</option>
+                            <option value="Assurance & Audits">Assurance & Audits</option>
+                            <option value="Statistic advisors">Statistic advisors</option>
+                        </select>
+                        </form>
+                    <button class="custom-btn-accent">Submit</button>
+                </div>
             </div>
         </div>
     </div>

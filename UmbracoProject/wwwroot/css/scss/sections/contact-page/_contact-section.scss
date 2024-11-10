@@ -1,0 +1,114 @@
+.contact-section{
+    .background{
+        background-repeat: no-repeat;
+        .container{
+            padding-top: 300px;
+            .contact-us-area{
+                border: 1px solid var(--color-border-light);
+                box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.1);
+                width: 100%;
+                height: 570px;
+                background-color: var(--color-light);
+                padding: 70px;
+                margin-bottom: 100px;
+
+
+                .texts{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    h2{
+                        margin: 0;
+                    }
+                    .quote{
+                        font-style: italic;
+                        font-size: 14px;
+                        &.quote-top{
+                            margin-top: 20px;
+                        }
+                        &.quote-bottom{
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+                .form-area{
+                    text-align: center;
+                    form{
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        grid-template-areas:
+                        "name phone"
+                        "email consulting";
+                        gap: 20px 30px;
+
+                        input{
+                            font-style: italic;
+                            font-size: 14px;
+                            font-weight: 300;
+                            border: 1px solid var(--color-border-light);
+                            padding-left: 20px;
+                            &#name,#email,#phone{
+                                height: 50px;
+                            }
+
+                        }
+                        select{
+                            border: 1px solid var(--color-border-light);
+                            padding-left: 20px;
+                            font-size: 14px;
+                            font-weight: 300;
+                            option{
+
+                            }
+                        }
+                        #name{
+                            grid-area: name;
+                        }
+                        #email{
+                            grid-area: email;
+                        }
+                        #phone{
+                            grid-area: phone;
+                        }
+                        #consulting{
+                            grid-area: consulting;
+                        }
+                    }
+                    .custom-btn-primary{
+                        margin-top: 20px;
+                        margin-bottom: 80px;
+                    }
+
+                }
+            }
+            .logos-area {
+                .logos-format {
+                    margin-top: 40px;
+                    margin-bottom: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 30px;
+
+                    img {
+                        width: 30%;
+                    }
+
+                    @include desktop {
+                        margin-top: 80px;
+                        margin-bottom: 70px;
+                        justify-content: space-around;
+
+                        img {
+                            width: auto;
+                        }
+                    }
+
+                }
+
+
+            }
+        }
+    }
+}

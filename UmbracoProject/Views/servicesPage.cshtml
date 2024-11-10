@@ -1,0 +1,69 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "mainLayout.cshtml";
+    ViewBag.Title = Model.Value("pageTitle");
+
+    var cardImageUrl1 = Model?.Value<IPublishedContent>("cardImage1")?.Url() ?? null;
+    var cardImageUrl2 = Model?.Value<IPublishedContent>("cardImage2")?.Url() ?? null;
+    var cardImageUrl3 = Model?.Value<IPublishedContent>("cardImage3")?.Url() ?? null;
+    var cardImageUrl4 = Model?.Value<IPublishedContent>("cardImage4")?.Url() ?? null;
+    var cardImageUrl5 = Model?.Value<IPublishedContent>("cardImage5")?.Url() ?? null;
+    var cardImageUrl6 = Model?.Value<IPublishedContent>("cardImage6")?.Url() ?? null;
+                            
+
+}
+<section class="our-services-section">
+    <div class="background bg-light">
+        <div class="container">
+            <div class="section-format">
+                <div class="texts-area">
+                    <div class="headlines">
+                        <h2>@Model.Value("ourServicesTitle1")</h2>
+                        <h2>@Model.Value("ourServicesTitle2")</h2>
+                    </div>
+                </div>
+                <div class="cards-area">
+                    <a href="/riskmanagement" class="card">
+                        <h5>@Model.Value("cardTitle1") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@cardImageUrl1" alt="@Model.Value("cardImageAltText1")">
+                        <p>@Model.Value("cardText1")</p>
+                    </a>
+                    <a href="/bondsandcommodities" class="card">
+                        <h5>@Model.Value("cardTitle2") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@cardImageUrl2" alt="@Model.Value("cardImageAltText2")">
+                        <p>@Model.Value("cardText2")</p>
+                    </a>
+                    <a href="/assuranceandaudits" class="card">
+                        <h5>@Model.Value("cardTitle3") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@cardImageUrl3" alt="@Model.Value("cardImageAltText3")">
+                        <p>@Model.Value("cardText3")</p>
+                    </a>
+                    <a href="/taxandtrusts" class="card">
+                        <h5>@Model.Value("cardTitle4") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@cardImageUrl4" alt="@Model.Value("cardImageAltText4")">
+                        <p>@Model.Value("cardText4")</p>
+                    </a>
+                    <a href="/financialadvisor" class="card">
+                        <h5>@Model.Value("cardTitle5") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@cardImageUrl5" alt="@Model.Value("cardImageAltText5")">
+                        <p>@Model.Value("cardText5")</p>
+                    </a>
+                    <a href="/statisticadvisors" class="card">
+                        <h5>@Model.Value("cardTitle6") <i class="fa-solid fa-arrow-up-right-from-square"></i></h5>
+                        <img src="@cardImageUrl6" alt="@Model.Value("cardImageAltText6")">
+                        <p>@Model.Value("cardText6")</p>
+                    </a>
+                </div>
+            </div>
+            <div class="pagination-area">
+                <div class="pagination">
+                    <a href="" class="previous">Prev</a>
+                    <a href="" class="active-number">1</a>
+                    <a href="" class="number">2</a>
+                    <a href="" class="next">Next</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
