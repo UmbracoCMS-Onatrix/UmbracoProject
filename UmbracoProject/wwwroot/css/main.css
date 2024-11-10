@@ -1373,6 +1373,7 @@ h6 {
 
 .contact-section .background {
   background-repeat: no-repeat;
+  background-position: center top;
 }
 .contact-section .background .container {
   padding-top: 300px;

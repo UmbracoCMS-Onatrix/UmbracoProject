@@ -1,9 +1,12 @@
-.contact-section{
-    .background{
+.contact-section {
+    .background {
         background-repeat: no-repeat;
-        .container{
+        background-position: center top;
+
+        .container {
             padding-top: 300px;
-            .contact-us-area{
+
+            .contact-us-area {
                 border: 1px solid var(--color-border-light);
                 box-shadow: 0px 14px 8px rgba(0, 0, 0, 0.1);
                 width: 100%;
@@ -13,75 +16,86 @@
                 margin-bottom: 100px;
 
 
-                .texts{
+                .texts {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    h2{
+
+                    h2 {
                         margin: 0;
                     }
-                    .quote{
+
+                    .quote {
                         font-style: italic;
                         font-size: 14px;
-                        &.quote-top{
+
+                        &.quote-top {
                             margin-top: 20px;
                         }
-                        &.quote-bottom{
+
+                        &.quote-bottom {
                             margin-bottom: 20px;
                         }
                     }
                 }
-                .form-area{
+
+                .form-area {
                     text-align: center;
-                    form{
+
+                    form {
                         display: grid;
                         grid-template-columns: 1fr 1fr;
                         grid-template-rows: 1fr 1fr;
                         grid-template-areas:
-                        "name phone"
-                        "email consulting";
+                            "name phone" "email consulting";
                         gap: 20px 30px;
 
-                        input{
+                        input {
                             font-style: italic;
                             font-size: 14px;
                             font-weight: 300;
                             border: 1px solid var(--color-border-light);
                             padding-left: 20px;
-                            &#name,#email,#phone{
+
+                            &#name, #email, #phone {
                                 height: 50px;
                             }
-
                         }
-                        select{
+
+                        select {
                             border: 1px solid var(--color-border-light);
                             padding-left: 20px;
                             font-size: 14px;
                             font-weight: 300;
-                            option{
 
+                            option {
                             }
                         }
-                        #name{
+
+                        #name {
                             grid-area: name;
                         }
-                        #email{
+
+                        #email {
                             grid-area: email;
                         }
-                        #phone{
+
+                        #phone {
                             grid-area: phone;
                         }
-                        #consulting{
+
+                        #consulting {
                             grid-area: consulting;
                         }
                     }
-                    .custom-btn-primary{
+
+                    .custom-btn-primary {
                         margin-top: 20px;
                         margin-bottom: 80px;
                     }
-
                 }
             }
+
             .logos-area {
                 .logos-format {
                     margin-top: 40px;
@@ -104,10 +118,7 @@
                             width: auto;
                         }
                     }
-
                 }
-
-
             }
         }
     }
